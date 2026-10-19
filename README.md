@@ -6,6 +6,28 @@
 
 *The job search that runs on your machine.*
 
+## Why I built this
+
+I'm Anna Sogrina, a People and Organisational Development lead. My work is building people systems for engineering organisations: performance and levels, leadership development, and the people side of moving to AI-native ways of working. I'm not a software engineer, and I built this with Claude Code.
+
+When I started looking for my next role, I treated the search like any process I'd redesign at work. I asked where time was being lost, what should be automated, and which decisions must stay with a human.
+
+**What it does for me every day:**
+- **Watches employers directly.** It polls about 230 companies' own job boards across six applicant-tracking systems, plus several job portals, and reports what went live since yesterday.
+- **Filters before reading.** Hard gates for eligibility, language, sector and timezone run first. Only then does it score fit against my profile.
+- **Drafts packages for strong fits.** A tailored CV and cover letter are ready the same day a role is posted. The application itself is always sent by me.
+- **Keeps the tracker current.** Employer emails (rejections, invites) are read and recorded with the source cited, so the morning report never suggests following up with a company that already said no.
+
+**What I learned, as someone who designs work for a living:**
+- **Aggregators lose roles.** Several strong matches never appeared in portal searches and were only visible on the employer's own board. The fix was a registry of companies and a tool that discovers which system each one uses.
+- **A silent agent is worse than a failing one.** Early runs did the work and never told me. The report is now mandatory, even on a quiet day.
+- **Every correction becomes a rule.** When I disagreed with a decision, the reasoning went into the instructions with a short precedent, so the same mistake doesn't come back.
+- **Decide where the human stays in the loop.** The agent searches, filters, drafts and checks. Choosing, applying and anything that speaks for me stay mine. That's the same boundary question I work on when organisations adopt AI.
+
+See a [sample morning report](docs/sample-daily-report.md) (fictional data).
+
+[annasogrina.com](https://annasogrina.com) · [LinkedIn](https://www.linkedin.com/in/anna-sogrina-38629064/)
+
 ## About this fork
 
 This repository is a fork of [MadsLorentzen/ai-job-search](https://github.com/MadsLorentzen/ai-job-search) (MIT licence, see [LICENSE](LICENSE)), adapted for **HR / People / Organisational Development roles in remote Europe**. The upstream framework, its commands and its documentation below are kept intact; this fork adds:
