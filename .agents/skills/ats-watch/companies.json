@@ -1,0 +1,2154 @@
+{
+  "_comment": "Target-company registry for ats-watch. Each entry: {ats, slug, name, tags}. Add companies freely — the CLI polls whatever is listed here. To find a company's ATS, try its careers page URL: jobs.ashbyhq.com/<slug>, boards.greenhouse.io/<slug>, jobs.lever.co/<slug>, apply.workable.com/api/v1/widget/accounts/<slug> (no description field — a Workable job's description will always come back null, that's the API's limit, not a bug), api.smartrecruiters.com/v1/companies/<slug>/postings, <slug>.recruitee.com/api/offers/. Large remote-jobs marketplace boards (intermediaries that list on behalf of other employers) are deliberately not registered: they tend to time out and they hide the real hiring company, which makes the Sector Gate unverifiable. Bulk growth via probe_slugs.py, which verifies each slug against every supported vendor with a live request; see that script's docstring for per-vendor probe reliability. Recruitee was added as the 6th ATS type after a strong-fit role on a vanity careers domain (jobs.<company>.com over Recruitee) was missed entirely. Recruitee 404s properly on unknown slugs, so it is a reliable probe. NOTE for Recruitee entries: the top-level `location` is a display string (\"Remote job\"); real geography lives in `locations[]`, which the CLI joins. Tags are free-form hints for humans (sector, region, how the entry was discovered); the CLI does not filter on them.",
+  "companies": [
+    {
+      "ats": "ashby",
+      "slug": "cohere",
+      "name": "Cohere",
+      "tags": [
+        "ai",
+        "remote-friendly"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "elevenlabs",
+      "name": "ElevenLabs",
+      "tags": [
+        "ai",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "synthesia",
+      "name": "Synthesia",
+      "tags": [
+        "ai",
+        "eu"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "deepl",
+      "name": "DeepL",
+      "tags": [
+        "ai",
+        "eu"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "notion",
+      "name": "Notion",
+      "tags": [
+        "saas"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "linear",
+      "name": "Linear",
+      "tags": [
+        "devtools",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "supabase",
+      "name": "Supabase",
+      "tags": [
+        "devtools",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "posthog",
+      "name": "PostHog",
+      "tags": [
+        "devtools",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "railway",
+      "name": "Railway",
+      "tags": [
+        "devtools",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "render",
+      "name": "Render",
+      "tags": [
+        "devtools",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "sentry",
+      "name": "Sentry",
+      "tags": [
+        "devtools"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "docker",
+      "name": "Docker",
+      "tags": [
+        "devtools",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "zapier",
+      "name": "Zapier",
+      "tags": [
+        "saas",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "miro",
+      "name": "Miro",
+      "tags": [
+        "saas",
+        "eu"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "pleo",
+      "name": "Pleo",
+      "tags": [
+        "fintech",
+        "eu"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "qonto",
+      "name": "Qonto",
+      "tags": [
+        "fintech",
+        "eu"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "amplitude",
+      "name": "Amplitude",
+      "tags": [
+        "saas"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "buffer",
+      "name": "Buffer",
+      "tags": [
+        "saas",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "ramp",
+      "name": "Ramp",
+      "tags": [
+        "fintech",
+        "remote-friendly"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "vanta",
+      "name": "Vanta",
+      "tags": [
+        "saas",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "runway",
+      "name": "Runway",
+      "tags": [
+        "fintech",
+        "remote-friendly"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "hex",
+      "name": "Hex",
+      "tags": [
+        "saas",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "watershed",
+      "name": "Watershed",
+      "tags": [
+        "climate",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "commonroom",
+      "name": "Common Room",
+      "tags": [
+        "saas",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "modal",
+      "name": "Modal",
+      "tags": [
+        "ai",
+        "devtools"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "assembledhq",
+      "name": "Assembled",
+      "tags": [
+        "saas",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "anthropic",
+      "name": "Anthropic",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "canonical",
+      "name": "Canonical",
+      "tags": [
+        "devtools",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "gitlab",
+      "name": "GitLab",
+      "tags": [
+        "devtools",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "vercel",
+      "name": "Vercel",
+      "tags": [
+        "devtools",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "grafanalabs",
+      "name": "Grafana Labs",
+      "tags": [
+        "devtools",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "figma",
+      "name": "Figma",
+      "tags": [
+        "saas"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "airtable",
+      "name": "Airtable",
+      "tags": [
+        "saas"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "contentful",
+      "name": "Contentful",
+      "tags": [
+        "saas",
+        "eu"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "typeform",
+      "name": "Typeform",
+      "tags": [
+        "saas",
+        "spain"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "algolia",
+      "name": "Algolia",
+      "tags": [
+        "devtools",
+        "eu"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "datadog",
+      "name": "Datadog",
+      "tags": [
+        "devtools"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "mixpanel",
+      "name": "Mixpanel",
+      "tags": [
+        "saas"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "netlify",
+      "name": "Netlify",
+      "tags": [
+        "devtools",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "remotecom",
+      "name": "Remote.com",
+      "tags": [
+        "hrtech",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "monzo",
+      "name": "Monzo",
+      "tags": [
+        "fintech",
+        "uk"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "n26",
+      "name": "N26",
+      "tags": [
+        "fintech",
+        "eu"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "stripe",
+      "name": "Stripe",
+      "tags": [
+        "fintech",
+        "eu"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "elastic",
+      "name": "Elastic",
+      "tags": [
+        "devtools",
+        "eu",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "klaviyo",
+      "name": "Klaviyo",
+      "tags": [
+        "saas"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "coinbase",
+      "name": "Coinbase",
+      "tags": [
+        "fintech",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "doctolib",
+      "name": "Doctolib",
+      "tags": [
+        "healthtech",
+        "eu",
+        "france"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "wolt",
+      "name": "Wolt",
+      "tags": [
+        "saas",
+        "eu",
+        "finland"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "asana",
+      "name": "Asana",
+      "tags": [
+        "saas"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "webflow",
+      "name": "Webflow",
+      "tags": [
+        "saas",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "attentive",
+      "name": "Attentive",
+      "tags": [
+        "saas"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "circleci",
+      "name": "CircleCI",
+      "tags": [
+        "devtools",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "pagerduty",
+      "name": "PagerDuty",
+      "tags": [
+        "devtools"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "intercom",
+      "name": "Intercom",
+      "tags": [
+        "saas",
+        "eu",
+        "ireland"
+      ]
+    },
+    {
+      "ats": "lever",
+      "slug": "scaleway",
+      "name": "Scaleway",
+      "tags": [
+        "cloud",
+        "eu"
+      ]
+    },
+    {
+      "ats": "lever",
+      "slug": "odaseva",
+      "name": "Odaseva",
+      "tags": [
+        "saas",
+        "eu",
+        "france"
+      ]
+    },
+    {
+      "ats": "lever",
+      "slug": "azul",
+      "name": "Azul",
+      "tags": [
+        "devtools",
+        "eu"
+      ]
+    },
+    {
+      "ats": "lever",
+      "slug": "spreetail",
+      "name": "Spreetail",
+      "tags": [
+        "ecommerce",
+        "uk"
+      ]
+    },
+    {
+      "ats": "workable",
+      "slug": "speexx",
+      "name": "Speexx",
+      "tags": [
+        "edtech",
+        "eu",
+        "remote-friendly"
+      ]
+    },
+    {
+      "ats": "workable",
+      "slug": "optasia",
+      "name": "Optasia",
+      "tags": [
+        "fintech",
+        "remote-friendly"
+      ]
+    },
+    {
+      "ats": "workable",
+      "slug": "emerging-travel-group",
+      "name": "Emerging Travel Group",
+      "tags": [
+        "traveltech",
+        "remote-friendly"
+      ]
+    },
+    {
+      "ats": "smartrecruiters",
+      "slug": "PeopleCanFly",
+      "name": "People Can Fly",
+      "tags": [
+        "gaming",
+        "eu",
+        "poland"
+      ]
+    },
+    {
+      "ats": "smartrecruiters",
+      "slug": "Experian",
+      "name": "Experian",
+      "tags": [
+        "fintech"
+      ]
+    },
+    {
+      "ats": "smartrecruiters",
+      "slug": "PAConsulting",
+      "name": "PA Consulting",
+      "tags": [
+        "consulting",
+        "eu"
+      ]
+    },
+    {
+      "ats": "smartrecruiters",
+      "slug": "Insightsoftware",
+      "name": "insightsoftware",
+      "tags": [
+        "saas",
+        "eu"
+      ]
+    },
+    {
+      "ats": "smartrecruiters",
+      "slug": "MicroStrategy1",
+      "name": "MicroStrategy",
+      "tags": [
+        "saas",
+        "eu",
+        "poland"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "percona",
+      "name": "Percona",
+      "tags": [
+        "opensource",
+        "remote-first",
+        "infra"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "m-kopa",
+      "name": "M-KOPA",
+      "tags": [
+        "fintech",
+        "remote-friendly"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "corgi",
+      "name": "Corgi Insurance",
+      "tags": [
+        "insurtech",
+        "remote-friendly"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "runpod",
+      "name": "RunPod",
+      "tags": [
+        "ai",
+        "infra",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "Humanly",
+      "name": "Humanly",
+      "tags": [
+        "ai",
+        "hybrid-office"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "emergence",
+      "name": "Emergence Software",
+      "tags": [
+        "remote-friendly"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "openrouter",
+      "name": "OpenRouter",
+      "tags": [
+        "ai",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "relayprotocol",
+      "name": "Relay",
+      "tags": [
+        "crypto",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "livekit",
+      "name": "LiveKit",
+      "tags": [
+        "ai",
+        "infra",
+        "remote-friendly"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "adyen",
+      "name": "Adyen",
+      "tags": [
+        "fintech",
+        "eu"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "swap",
+      "name": "Swap",
+      "tags": [
+        "ecommerce",
+        "eu"
+      ]
+    },
+    {
+      "ats": "lever",
+      "slug": "pigment",
+      "name": "Pigment",
+      "tags": [
+        "saas",
+        "eu",
+        "fintech-adjacent"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "lokainc",
+      "name": "Loka",
+      "tags": [
+        "consulting",
+        "remote-first",
+        "eu"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "plos",
+      "name": "Public Library of Science (PLOS)",
+      "tags": [
+        "nonprofit",
+        "publishing",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "behavox",
+      "name": "Behavox",
+      "tags": [
+        "ai",
+        "compliance",
+        "eu"
+      ]
+    },
+    {
+      "ats": "lever",
+      "slug": "megaport",
+      "name": "Megaport",
+      "tags": [
+        "infrastructure",
+        "remote-friendly"
+      ]
+    },
+    {
+      "ats": "workable",
+      "slug": "booksy",
+      "name": "Booksy",
+      "tags": [
+        "marketplace",
+        "eu",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "lever",
+      "slug": "aircall",
+      "name": "Aircall",
+      "tags": [
+        "saas",
+        "fr",
+        "remote-friendly",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "forto",
+      "name": "Forto",
+      "tags": [
+        "logistics",
+        "de",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "raisin",
+      "name": "Raisin",
+      "tags": [
+        "fintech",
+        "de",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "solarisbank",
+      "name": "Solaris",
+      "tags": [
+        "fintech",
+        "de",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "mollie",
+      "name": "Mollie",
+      "tags": [
+        "payments",
+        "nl",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "bird",
+      "name": "Bird (MessageBird)",
+      "tags": [
+        "saas",
+        "nl",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "smartrecruiters",
+      "slug": "picnic",
+      "name": "Picnic",
+      "tags": [
+        "ecommerce",
+        "nl",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "sendcloud",
+      "name": "Sendcloud",
+      "tags": [
+        "logistics",
+        "nl",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "catawiki",
+      "name": "Catawiki",
+      "tags": [
+        "marketplace",
+        "nl",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "showpad",
+      "name": "Showpad",
+      "tags": [
+        "saas",
+        "be",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "collibra",
+      "name": "Collibra",
+      "tags": [
+        "data",
+        "be",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "lever",
+      "slug": "deliverect",
+      "name": "Deliverect",
+      "tags": [
+        "saas",
+        "be",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "lightspeed",
+      "name": "Lightspeed",
+      "tags": [
+        "commerce",
+        "eu",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "wise",
+      "name": "Wise",
+      "tags": [
+        "fintech",
+        "uk",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "gocardless",
+      "name": "GoCardless",
+      "tags": [
+        "payments",
+        "uk",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "truelayer",
+      "name": "TrueLayer",
+      "tags": [
+        "fintech",
+        "uk",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "tide",
+      "name": "Tide",
+      "tags": [
+        "fintech",
+        "uk",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "zego",
+      "name": "Zego",
+      "tags": [
+        "insurtech",
+        "uk",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "marshmallow",
+      "name": "Marshmallow",
+      "tags": [
+        "insurtech",
+        "uk",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "cleo",
+      "name": "Cleo",
+      "tags": [
+        "fintech",
+        "uk",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "freetrade",
+      "name": "Freetrade",
+      "tags": [
+        "fintech",
+        "uk",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "lever",
+      "slug": "farfetch",
+      "name": "Farfetch",
+      "tags": [
+        "ecommerce",
+        "eu",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "skyscanner",
+      "name": "Skyscanner",
+      "tags": [
+        "travel",
+        "uk",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "deliveroo",
+      "name": "Deliveroo",
+      "tags": [
+        "marketplace",
+        "uk",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "smartrecruiters",
+      "slug": "gousto",
+      "name": "Gousto",
+      "tags": [
+        "ecommerce",
+        "uk",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "lever",
+      "slug": "zopa",
+      "name": "Zopa",
+      "tags": [
+        "fintech",
+        "uk",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "oaknorth",
+      "name": "OakNorth",
+      "tags": [
+        "fintech",
+        "uk",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "snyk",
+      "name": "Snyk",
+      "tags": [
+        "security",
+        "remote-first",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "quantexa",
+      "name": "Quantexa",
+      "tags": [
+        "ai",
+        "uk",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "peak",
+      "name": "Peak",
+      "tags": [
+        "ai",
+        "uk",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "faculty",
+      "name": "Faculty",
+      "tags": [
+        "ai",
+        "uk",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "graphcore",
+      "name": "Graphcore",
+      "tags": [
+        "hardware",
+        "uk",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "improbable",
+      "name": "Improbable",
+      "tags": [
+        "gaming-tech",
+        "uk",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "lever",
+      "slug": "healx",
+      "name": "Healx",
+      "tags": [
+        "biotech",
+        "uk",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "alan",
+      "name": "Alan",
+      "tags": [
+        "insurtech",
+        "fr",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "lever",
+      "slug": "swile",
+      "name": "Swile",
+      "tags": [
+        "hr-tech",
+        "fr",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "spendesk",
+      "name": "Spendesk",
+      "tags": [
+        "fintech",
+        "fr",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "pennylane",
+      "name": "Pennylane",
+      "tags": [
+        "fintech",
+        "fr",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "lever",
+      "slug": "younited",
+      "name": "Younited",
+      "tags": [
+        "fintech",
+        "fr",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "akur8",
+      "name": "Akur8",
+      "tags": [
+        "insurtech",
+        "fr",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "dataiku",
+      "name": "Dataiku",
+      "tags": [
+        "ai",
+        "fr",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "truecaller",
+      "name": "Truecaller",
+      "tags": [
+        "mobile",
+        "se",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "cognite",
+      "name": "Cognite",
+      "tags": [
+        "industrial-ai",
+        "no",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "gelato",
+      "name": "Gelato",
+      "tags": [
+        "print-tech",
+        "no",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "lovable",
+      "name": "Lovable",
+      "tags": [
+        "ai",
+        "se",
+        "remote-first",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "mentimeter",
+      "name": "Mentimeter",
+      "tags": [
+        "saas",
+        "se",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "trustpilot",
+      "name": "Trustpilot",
+      "tags": [
+        "saas",
+        "dk",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "lunar",
+      "name": "Lunar",
+      "tags": [
+        "fintech",
+        "dk",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "labelbox",
+      "name": "Labelbox",
+      "tags": [
+        "ai",
+        "remote-first",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "cloudbeds",
+      "name": "Cloudbeds",
+      "tags": [
+        "saas",
+        "remote-first",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "masabi",
+      "name": "Masabi",
+      "tags": [
+        "transit-tech",
+        "uk",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "lokalise",
+      "name": "Lokalise",
+      "tags": [
+        "saas",
+        "remote-first",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "lever",
+      "slug": "whereby",
+      "name": "Whereby",
+      "tags": [
+        "saas",
+        "remote-first",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "relex",
+      "name": "RELEX Solutions",
+      "tags": [
+        "saas",
+        "fi",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "oura",
+      "name": "Oura",
+      "tags": [
+        "hardware",
+        "fi",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "iceye",
+      "name": "ICEYE",
+      "tags": [
+        "space",
+        "fi",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "yousician",
+      "name": "Yousician",
+      "tags": [
+        "edtech",
+        "fi",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "smartrecruiters",
+      "slug": "smartrecruiters",
+      "name": "SmartRecruiters",
+      "tags": [
+        "hr-tech",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "lever",
+      "slug": "jobandtalent",
+      "name": "Jobandtalent",
+      "tags": [
+        "hr-tech",
+        "es",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "cabify",
+      "name": "Cabify",
+      "tags": [
+        "mobility",
+        "es",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "wallapop",
+      "name": "Wallapop",
+      "tags": [
+        "marketplace",
+        "es",
+        "discovered-2026-09-08"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "rula",
+      "name": "Rula",
+      "tags": [
+        "healthtech",
+        "mental-health",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "lumos",
+      "name": "Lumos",
+      "tags": [
+        "saas",
+        "identity-security"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "homebase",
+      "name": "Homebase",
+      "tags": [
+        "saas",
+        "smb-workforce"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "dropbox",
+      "name": "Dropbox",
+      "tags": [
+        "saas",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "surveymonkey",
+      "name": "SurveyMonkey (Momentive)",
+      "tags": [
+        "saas",
+        "survey-research"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "educate",
+      "name": "Educate!",
+      "tags": [
+        "nonprofit",
+        "education",
+        "africa"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "pliancy",
+      "name": "Pliancy",
+      "tags": [
+        "it-services",
+        "saas"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "okx",
+      "name": "OKX",
+      "tags": [
+        "crypto-exchange",
+        "fintech"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "commercetools",
+      "name": "commercetools",
+      "tags": [
+        "saas",
+        "ecommerce",
+        "germany"
+      ]
+    },
+    {
+      "ats": "lever",
+      "slug": "collabora",
+      "name": "Collabora",
+      "tags": [
+        "opensource",
+        "consulting",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "lever",
+      "slug": "blablacar",
+      "name": "BlaBlaCar",
+      "tags": [
+        "marketplace",
+        "mobility",
+        "france"
+      ]
+    },
+    {
+      "ats": "lever",
+      "slug": "gohighlevel",
+      "name": "HighLevel",
+      "tags": [
+        "saas",
+        "marketing-automation"
+      ]
+    },
+    {
+      "ats": "lever",
+      "slug": "rover",
+      "name": "Rover",
+      "tags": [
+        "marketplace",
+        "pet-services"
+      ]
+    },
+    {
+      "ats": "lever",
+      "slug": "upguard",
+      "name": "UpGuard",
+      "tags": [
+        "cybersecurity",
+        "saas",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "tennr",
+      "name": "Tennr",
+      "tags": [
+        "ai",
+        "healthtech"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "reflectionai",
+      "name": "Reflection AI",
+      "tags": [
+        "ai",
+        "research"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "ideals",
+      "name": "Ideals (iDeals VDR)",
+      "tags": [
+        "saas",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "storyblok",
+      "name": "Storyblok",
+      "tags": [
+        "saas",
+        "cms",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "bloomreach",
+      "name": "Bloomreach",
+      "tags": [
+        "saas",
+        "ecommerce",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "mozilla",
+      "name": "Mozilla",
+      "tags": [
+        "opensource",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "accelerationpartners",
+      "name": "Acceleration Partners",
+      "tags": [
+        "marketing",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "cape",
+      "name": "Cape",
+      "tags": [
+        "telecom",
+        "privacy"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "lgads",
+      "name": "LG Ad Solutions",
+      "tags": [
+        "adtech",
+        "ctv"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "coder",
+      "name": "Coder",
+      "tags": [
+        "devtools",
+        "opensource",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "equal1",
+      "name": "Equal1",
+      "tags": [
+        "quantum",
+        "deeptech",
+        "eu"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "upbound",
+      "name": "Upbound",
+      "tags": [
+        "cloud",
+        "opensource",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "lever",
+      "slug": "quantummetric",
+      "name": "Quantum Metric",
+      "tags": [
+        "saas",
+        "analytics",
+        "remote-friendly"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "openai",
+      "name": "OpenAI",
+      "tags": [
+        "ai",
+        "remote-friendly"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "virtahealth",
+      "name": "Virta Health",
+      "tags": [
+        "healthtech",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "parafin",
+      "name": "Parafin",
+      "tags": [
+        "fintech",
+        "remote-friendly"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "postscript",
+      "name": "Postscript",
+      "tags": [
+        "saas",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "turing",
+      "name": "Turing",
+      "tags": [
+        "ai",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "accordion",
+      "name": "Accordion",
+      "tags": [
+        "consulting",
+        "finance"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "ag1",
+      "name": "AG1",
+      "tags": [
+        "nutrition",
+        "consumer health"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "alpaca",
+      "name": "Alpaca",
+      "tags": [
+        "fintech",
+        "brokerage infrastructure"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "deepgram",
+      "name": "Deepgram",
+      "tags": [
+        "ai",
+        "speech"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "remotepeople",
+      "name": "Remote People",
+      "tags": [
+        "eor",
+        "hr services"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "ashby",
+      "name": "Ashby",
+      "tags": [
+        "hr-tech",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "eneba",
+      "name": "Eneba",
+      "tags": [
+        "marketplace",
+        "gaming-marketplace"
+      ]
+    },
+    {
+      "ats": "workable",
+      "slug": "elvtr",
+      "name": "ELVTR",
+      "tags": [
+        "edtech",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "smartrecruiters",
+      "slug": "cint",
+      "name": "Cint",
+      "tags": [
+        "martech",
+        "insights",
+        "remote-friendly"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "n8n",
+      "name": "n8n",
+      "tags": [
+        "automation",
+        "opensource",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "workable",
+      "slug": "jimdo",
+      "name": "Jimdo",
+      "tags": [
+        "saas",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "workable",
+      "slug": "lime",
+      "name": "Lime",
+      "tags": [
+        "mobility",
+        "remote-friendly"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "10xteam",
+      "name": "10x Team",
+      "tags": [
+        "ai",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "recruitee",
+      "slug": "pvcase",
+      "name": "PVcase",
+      "tags": [
+        "solar",
+        "saas",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "sunrise",
+      "name": "Sunrise Robotics",
+      "tags": [
+        "robotics",
+        "deeptech",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "10alabs",
+      "name": "10a Labs",
+      "tags": [
+        "ai",
+        "ai-safety",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "flip",
+      "name": "Flip",
+      "tags": [
+        "hr-tech",
+        "saas",
+        "dach"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "forter",
+      "name": "Forter",
+      "tags": [
+        "fintech",
+        "fraud-prevention"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "kestra",
+      "name": "Kestra Technologies",
+      "tags": [
+        "devtools",
+        "opensource",
+        "remote-first"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "oyster",
+      "name": "Oyster",
+      "tags": [
+        "eor",
+        "hr-tech",
+        "remote-first",
+        "discovered-2026-10-05"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "nebius",
+      "name": "Nebius",
+      "tags": [
+        "ai",
+        "cloud",
+        "eu",
+        "remote-friendly",
+        "discovered-2026-10-05"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "smartsheet",
+      "name": "Smartsheet",
+      "tags": [
+        "saas",
+        "discovered-2026-10-05"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "veriff",
+      "name": "Veriff",
+      "tags": [
+        "identity-verification",
+        "scale-up",
+        "barcelona-hub",
+        "remote-friendly"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "tem",
+      "name": "tem",
+      "tags": [
+        "seed-list-2026-10"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "primer.io",
+      "name": "primer.io",
+      "tags": [
+        "seed-list-2026-10"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "paddle",
+      "name": "paddle",
+      "tags": [
+        "seed-list-2026-10"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "wayflyer",
+      "name": "wayflyer",
+      "tags": [
+        "seed-list-2026-10"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "fonoa",
+      "name": "fonoa",
+      "tags": [
+        "seed-list-2026-10"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "sanity",
+      "name": "sanity",
+      "tags": [
+        "seed-list-2026-10"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "payhawkio",
+      "name": "payhawk",
+      "tags": [
+        "seed-list-2026-10"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "clickhouse",
+      "name": "clickhouse",
+      "tags": [
+        "seed-list-2026-10"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "choco",
+      "name": "choco",
+      "tags": [
+        "seed-list-2026-10"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "ably30",
+      "name": "ably30",
+      "tags": [
+        "seed-list-2026-10"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "carwow",
+      "name": "carwow",
+      "tags": [
+        "seed-list-2026-10"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "moloco",
+      "name": "Moloco",
+      "tags": [
+        "adtech",
+        "ai",
+        "discovered-2026-10-12"
+      ]
+    },
+    {
+      "ats": "lever",
+      "slug": "airslate",
+      "name": "airslate",
+      "tags": [
+        "seed-list-2026-10"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "recraft",
+      "name": "recraft",
+      "tags": [
+        "seed-list-2026-10"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "wrike",
+      "name": "wrike",
+      "tags": [
+        "seed-list-2026-10"
+      ]
+    },
+    {
+      "ats": "lever",
+      "slug": "unlimit",
+      "name": "unlimit",
+      "tags": [
+        "seed-list-2026-10"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "humanoid",
+      "name": "humanoid",
+      "tags": [
+        "seed-list-2026-10"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "Mapbox",
+      "name": "Mapbox",
+      "tags": [
+        "seed-list-2026-10"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "xometryeurope",
+      "name": "xometryeurope",
+      "tags": [
+        "seed-list-2026-10"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "avride",
+      "name": "avride",
+      "tags": [
+        "seed-list-2026-10"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "platacard",
+      "name": "platacard",
+      "tags": [
+        "seed-list-2026-10"
+      ]
+    },
+    {
+      "ats": "ashby",
+      "slug": "lightspeedhq",
+      "name": "lightspeedhq",
+      "tags": [
+        "seed-list-2026-10"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "groupib",
+      "name": "groupib",
+      "tags": [
+        "seed-list-2026-10"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "toloka",
+      "name": "toloka",
+      "tags": [
+        "seed-list-2026-10"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "orioninnovation",
+      "name": "orioninnovation",
+      "tags": [
+        "seed-list-2026-10"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "flohealth",
+      "name": "flohealth",
+      "tags": [
+        "seed-list-2026-10"
+      ]
+    },
+    {
+      "ats": "lever",
+      "slug": "planner5d",
+      "name": "planner5d",
+      "tags": [
+        "seed-list-2026-10"
+      ]
+    },
+    {
+      "ats": "lever",
+      "slug": "easybrain",
+      "name": "easybrain",
+      "tags": [
+        "seed-list-2026-10"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "dbeaver",
+      "name": "dbeaver",
+      "tags": [
+        "seed-list-2026-10"
+      ]
+    },
+    {
+      "ats": "recruitee",
+      "slug": "aidigital",
+      "name": "aidigital",
+      "tags": [
+        "seed-list-2026-10"
+      ]
+    },
+    {
+      "ats": "recruitee",
+      "slug": "intento",
+      "name": "intento",
+      "tags": [
+        "seed-list-2026-10"
+      ]
+    },
+    {
+      "ats": "greenhouse",
+      "slug": "jetbrains",
+      "name": "jetbrains",
+      "tags": [
+        "seed-list-2026-10"
+      ]
+    },
+    {
+      "ats": "workable",
+      "slug": "jove",
+      "name": "JoVE",
+      "tags": [
+        "edtech",
+        "science-publishing",
+        "remote-first"
+      ]
+    }
+  ]
+}
