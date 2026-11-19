@@ -26,7 +26,7 @@ When I started looking for my next role, I treated the search like any process I
 
 See a [sample morning report](docs/sample-daily-report.md) (fictional data).
 
-[annasogrina.com](https://annasogrina.com) · [LinkedIn](https://www.linkedin.com/in/anna-sogrina-38629064/)
+[annasogrina.com](https://annasogrina.com) · [LinkedIn](https://www.linkedin.com/in/anna-sogrina/)
 
 ## About this fork
 
